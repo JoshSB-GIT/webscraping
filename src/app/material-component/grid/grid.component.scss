@@ -1,0 +1,16 @@
+mat-grid-tile {
+  background: lightblue;
+}
+
+.zoom {
+  transition: transform 1s;
+}
+
+.zoom:hover {
+  cursor: pointer;
+  transform: scale(1.07);
+}
+
+a {
+  color: rgb(24, 24, 24);
+}

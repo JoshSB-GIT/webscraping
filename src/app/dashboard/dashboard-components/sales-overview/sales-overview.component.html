@@ -1,0 +1,41 @@
+<mat-card>
+  <mat-card-content>
+    <div class="d-flex flex-wrap">
+      <div>
+        <mat-card-title>Valores de ventas</mat-card-title>
+        <mat-card-subtitle>Reflejo del valor real vs el valor actual</mat-card-subtitle>
+      </div>
+      <div class="ml-auto">
+        <ul class="list-inline">
+          <li>
+            <h6 class="text-success m-0">
+              <i class="mdi mdi-checkbox-blank-circle font-10 m-r-10"></i>Real
+            </h6>
+          </li>
+          <li>
+            <h6 class="text-info m-0">
+              <i class="mdi mdi-checkbox-blank-circle font-10 m-r-10"></i>Actual
+            </h6>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <apx-chart
+        [series]="chartOptions.series"
+        [chart]="chartOptions.chart"
+        [dataLabels]="chartOptions.dataLabels"
+        [plotOptions]="chartOptions.plotOptions"
+        [yaxis]="chartOptions.yaxis"
+        [legend]="chartOptions.legend"
+        [fill]="chartOptions.fill"
+        [stroke]="chartOptions.stroke"
+        [tooltip]="chartOptions.tooltip"
+        [xaxis]="chartOptions.xaxis"
+        [grid]="chartOptions.grid"
+      >
+      </apx-chart>
+    </div>
+  </mat-card-content>
+</mat-card>

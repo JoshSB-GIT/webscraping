@@ -1,0 +1,107 @@
+<!-- ============================================================== -->
+<!-- Fixed height Card Grid-->
+<!-- ============================================================== -->
+<div>
+  <div fxLayout="row">
+    <div fxFlex.gt-sm="100%">
+      <mat-card>
+        <mat-card-content>
+          <mat-card-title>Post cargados de Reddit</mat-card-title>
+          <mat-card-subtitle>Se hizo uso de la API de reddit para cargar los nuevos post, los hot post y los más
+            botados</mat-card-subtitle>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+  <div fxLayout="row">
+    <div fxFlex.gt-sm="100%">
+      <mat-card>
+        <mat-card-content>
+          <mat-card-title>HOT posts</mat-card-title>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="row">
+    <div *ngFor="let post of hot_list" class="col-md-4 zoom" fxFlex.gt-sm="100%">
+      <div fxFlex.gt-sm="100%">
+        <a href="{{post.url}}">
+          <mat-card>
+            <mat-card-content>
+              <mat-card-title>{{post.title}}</mat-card-title>
+              <mat-card-subtitle>{{post.autor}}</mat-card-subtitle>
+              <h5>ID: {{post.id}}</h5>
+              <h5>score: {{post.score}}</h5>
+              <h5>Total comment: {{post.total_comment}}</h5>
+              <a href="{{post.url}}">Ir al post</a>
+            </mat-card-content>
+          </mat-card>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div fxLayout="row">
+    <div fxFlex.gt-sm="100%">
+      <mat-card>
+        <mat-card-content>
+          <mat-card-title>NEW posts</mat-card-title>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="row">
+      <div *ngFor="let post of new_list" class="col-md-4 zoom">
+        <div fxFlex.gt-sm="100%">
+          <a href="{{post.url}}">
+            <mat-card>
+              <mat-card-content>
+                <mat-card-title>{{post.title}}</mat-card-title>
+                <mat-card-subtitle>{{post.autor}}</mat-card-subtitle>
+                <h5>ID: {{post.id}}</h5>
+                <h5>score: {{post.score}}</h5>
+                <h5>Total comment: {{post.total_comment}}</h5>
+                <a href="{{post.url}}">Ir al post</a>
+              </mat-card-content>
+            </mat-card>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div fxLayout="row">
+    <div fxFlex.gt-sm="100%">
+      <mat-card>
+        <mat-card-content>
+          <mat-card-title>Top posts</mat-card-title>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="row">
+    <div *ngFor="let post of top_list" class="col-md-4 zoom">
+      <div fxFlex.gt-sm="100%">
+        <a href="{{post.url}}">
+          <mat-card>
+            <mat-card-content>
+              <mat-card-title>{{post.title}}</mat-card-title>
+              <mat-card-subtitle>{{post.autor}}</mat-card-subtitle>
+              <h5>ID: {{post.id}}</h5>
+              <h5>score: {{post.score}}</h5>
+              <h5>Total comment: {{post.total_comment}}</h5>
+              <a href="{{post.url}}">Ir al post</a>
+            </mat-card-content>
+          </mat-card>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

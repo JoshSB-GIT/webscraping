@@ -1,0 +1,165 @@
+<!-- ============================================================== -->
+<!-- Simple four boxes Row -->
+<!-- ============================================================== -->
+
+<mat-card>
+  <mat-card-content>
+    <mat-card-title>Carga el archivo .CSV</mat-card-title>
+    <h4></h4>
+    <div class="button-row d-flex">
+      <input type="file" placeholder="Escoge tu archivo" (change)="onFileSelected($event)" accept=".csv">
+      <button mat-raised-button color="primary" (click)="uploadFile()">Cargar</button>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<div class="row">
+  <!-- column -->
+  <div class="col-lg-8 col-sm-12">
+    <mat-card>
+      <mat-card-content>
+        <div class="d-flex flex-wrap">
+          <div>
+            <mat-card-title>Valores de ventas</mat-card-title>
+            <mat-card-subtitle>Reflejo del valor real vs el valor actual</mat-card-subtitle>
+          </div>
+          <div class="ml-auto">
+            <ul class="list-inline">
+              <li>
+                <h6 class="text-success m-0">
+                  <i class="mdi mdi-checkbox-blank-circle font-10 m-r-10"></i>Real
+                </h6>
+              </li>
+              <li>
+                <h6 class="text-info m-0">
+                  <i class="mdi mdi-checkbox-blank-circle font-10 m-r-10"></i>Actual
+                </h6>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [dataLabels]="chartOptions.dataLabels"
+            [plotOptions]="chartOptions.plotOptions" [yaxis]="chartOptions.yaxis" [legend]="chartOptions.legend"
+            [fill]="chartOptions.fill" [stroke]="chartOptions.stroke" [tooltip]="chartOptions.tooltip"
+            [xaxis]="chartOptions.xaxis" [grid]="chartOptions.grid">
+          </apx-chart>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+  <!-- column -->
+  <!-- column -->
+  <div class="col-lg-4 col-sm-12">
+    <mat-card>
+      <mat-card-content>
+        <mat-card-title>Categorías</mat-card-title>
+        <mat-card-subtitle>Productos por categoría</mat-card-subtitle>
+        <div class="piechart">
+          <apx-chart [series]="VisitorChartOptions.series" [chart]="VisitorChartOptions.chart"
+            [labels]="VisitorChartOptions.labels" [responsive]="VisitorChartOptions.responsive"
+            [tooltip]="VisitorChartOptions.tooltip" [legend]="VisitorChartOptions.legend"
+            [colors]="VisitorChartOptions.colors" [dataLabels]="VisitorChartOptions.dataLabels"
+            [plotOptions]="VisitorChartOptions.plotOptions" [stroke]="VisitorChartOptions.stroke">
+          </apx-chart>
+        </div>
+      </mat-card-content>
+      <hr />
+      <mat-card-content>
+        <ul class="list-inline text-center">
+          <li>
+            <h6 class="text-success m-0">
+              <i class="mdi mdi-checkbox-blank-circle font-10 m-r-10"></i>Portátiles
+            </h6>
+          </li>
+          <li>
+            <h6 class="text-info m-0">
+              <i class="mdi mdi-checkbox-blank-circle font-10 m-r-10"></i>Mouses
+            </h6>
+          </li>
+          <li>
+            <h6 class="text-purple m-0">
+              <i class="mdi mdi-checkbox-blank-circle font-10 m-r-10"></i>Teclados
+            </h6>
+          </li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+  <!-- column -->
+</div>
+
+<mat-card class="">
+  <mat-card-content>
+    <div class="d-flex flex-wrap">
+      <div>
+        <mat-card-title>
+          <p style="color: #212121;">Lista de productos</p>
+        </mat-card-title>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+
+<!-- ============================================================== -->
+<!-- Image Card row-->
+<!-- ============================================================== -->
+
+
+<div class="row">
+  <!-- column -->
+  <div class="col-lg-6 col-sm-12">
+    <mat-card>
+      <mat-card-content>
+        <div class="d-flex flex-wrap">
+          <div>
+            <mat-card-title>Precio real</mat-card-title>
+            <mat-card-subtitle>Reflejo del valor real</mat-card-subtitle>
+          </div>
+          <div class="ml-auto">
+          </div>
+        </div>
+
+        <div>
+          <apx-chart [series]="chartOptions2.series" [chart]="chartOptions2.chart"
+            [dataLabels]="chartOptions2.dataLabels" [plotOptions]="chartOptions2.plotOptions"
+            [yaxis]="chartOptions2.yaxis" [legend]="chartOptions2.legend" [fill]="chartOptions2.fill"
+            [stroke]="chartOptions2.stroke" [tooltip]="chartOptions2.tooltip" [xaxis]="chartOptions2.xaxis"
+            [grid]="chartOptions2.grid">
+          </apx-chart>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+
+  </div>
+  <!-- column -->
+  <div class="col-lg-6 col-sm-12">
+    <mat-card>
+      <mat-card-content>
+        <div class="d-flex flex-wrap">
+          <div>
+            <mat-card-title>Precio real</mat-card-title>
+            <mat-card-subtitle>Reflejo del valor real</mat-card-subtitle>
+          </div>
+          <div class="ml-auto">
+          </div>
+        </div>
+
+        <div>
+          <apx-chart [series]="chartOptions3.series" [chart]="chartOptions3.chart"
+            [dataLabels]="chartOptions3.dataLabels" [plotOptions]="chartOptions3.plotOptions"
+            [yaxis]="chartOptions3.yaxis" [legend]="chartOptions3.legend" [fill]="chartOptions3.fill"
+            [stroke]="chartOptions3.stroke" [tooltip]="chartOptions3.tooltip" [xaxis]="chartOptions3.xaxis"
+            [grid]="chartOptions3.grid">
+          </apx-chart>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <!-- column -->
+</div>

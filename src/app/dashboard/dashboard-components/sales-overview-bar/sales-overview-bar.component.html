@@ -1,0 +1,29 @@
+<mat-card>
+  <mat-card-content>
+    <div class="d-flex flex-wrap">
+      <div>
+        <mat-card-title>Precio real</mat-card-title>
+        <mat-card-subtitle>Reflejo del valor real</mat-card-subtitle>
+      </div>
+      <div class="ml-auto">
+      </div>
+    </div>
+
+    <div>
+      <apx-chart
+        [series]="chartOptions.series"
+        [chart]="chartOptions.chart"
+        [dataLabels]="chartOptions.dataLabels"
+        [plotOptions]="chartOptions.plotOptions"
+        [yaxis]="chartOptions.yaxis"
+        [legend]="chartOptions.legend"
+        [fill]="chartOptions.fill"
+        [stroke]="chartOptions.stroke"
+        [tooltip]="chartOptions.tooltip"
+        [xaxis]="chartOptions.xaxis"
+        [grid]="chartOptions.grid"
+      >
+      </apx-chart>
+    </div>
+  </mat-card-content>
+</mat-card>
